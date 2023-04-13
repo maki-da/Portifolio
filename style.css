@@ -1,0 +1,252 @@
+*{
+padding: 0;
+margin: 0;
+font-family: 'Open Sans', sans-serif;
+}
+.Container{
+    background-color: black;
+    overflow: hidden;
+}
+.Salute{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    overflow: hidden;
+}
+.SaluteText{
+    color:#333 ;
+    font-size: 60vw;
+    cursor: default;
+}
+.SaluteTextContainer{
+    flex-direction: column;
+}
+.SaluteImgContainer{
+ flex-direction: column;   
+}
+.SaluteImg{
+    width:100%;
+    height: 100%;
+}
+.nameContainer{
+    height: 100vh;
+    background-color: blueviolet;
+}
+.name{
+    font-size: 10vw;
+    color: #333;
+    cursor: default;
+    text-align: center;
+    line-height: 100vh;
+    background-color: blanchedalmond;
+}
+.JobTitleContainer{
+    height: 100vh;
+}
+.dark{
+    background:url("./img/bg1.png");
+
+}
+.purple{
+    background:purple url("./img/bg2.png");
+
+}
+.jobTitle{
+    font-size: 8vw;
+    color: #333;
+    line-height: 100vh;
+    cursor: default;
+}
+.Projects{
+    display: flex;
+    flex-direction: column;
+    gap:30vh;
+    bottom:0px 100px;
+}
+.ProjectsTitle{
+    font-size:8vw ;
+    color: #333;
+}
+.Project{
+   display:flex;
+   align-items: center; 
+   gap: 100px;
+   height: 100vh;
+   overflow: hidden;
+}
+.project:nth-child(2n){
+    flex-direction:row-reverse;
+}
+.Phone{
+ flex: 1;
+ width:300px;
+ height: 600px; 
+ position: relative;  
+}
+.PhoneScreen{
+    width:264px;
+    height:567px;
+    position:absolute;
+    top: 17px;
+    left: 18px;
+    border-radius:25px;
+    overflow: scroll;
+}
+.PhoneScreen::-webkit-scrollbar {
+    display: none;
+}
+.PhoneApp{
+    width: 100px;
+
+}
+.ProjectDetail{
+flex: 1;
+display: flex;
+flex-direction: column;
+gap:50px;
+align-items: center;
+}
+.ProjectsTitle{
+    font-size: 7vw;
+    color:#555 ;
+
+}
+.ProjectDescription{
+font-size: 20px;
+color: #555;
+
+}
+.ProjectButton{
+    padding: 8px 8px;
+    background-color: transparent;
+    border: 2px solid #555;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; 
+}
+.ProjectButton::after{
+    content:"View Demo";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100;
+    background-color: aqua;
+    overflow: hidden;
+    transition:1s all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555;
+    color: #222;
+}
+.ProjectButton:hover.ProjectButton::after{
+    transform: translateX(100%);
+}
+.Laptop{
+    width: 600px;
+    height: 379px;
+    flex:1;
+    position:relative;
+}
+.LaptopScreen{
+   width:451px; 
+   height:283px;
+   position: absolute;
+   top: 18px;
+   left: 68px;
+   overflow: scroll;
+   background-color: aqua;
+}
+.Laptopapp {
+    width: 100%;
+  }
+  
+  .LaptopScreen::-webkit-scrollbar {
+    display: none;
+  }
+  .githubContainer{
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+
+  }
+  .githubTitle{
+    font-size:100px ;
+    color: #333;
+  }
+  .githubChart{
+    width: 820px;
+  }
+  .dates{
+    padding: 10px;
+    color: #555;
+    font-size: 12px;
+  }
+  .boxContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+  }
+  .box{
+    width:15px;
+    height: 15px;
+    background-color: #171c25;
+    border-radius: 2px;
+    cursor: pointer;
+    transition:3s all ease ;
+}
+.active:nth-last-child(4n){
+background-color: #195b3c;
+}
+.githubChart:hover .active:nth-child(2n+1){
+    background-color: #195b2c;
+  }
+  .githubChart:hover .active:nth-child(2n){
+    background-color: #063f24;
+  }
+  .githubSm{
+    display: none;
+  }
+  
+  @media screen and (max-width:1024px) {
+  
+    .projects{
+      padding: 0 30px;
+      text-align: center;
+    }
+    .project{
+        flex-direction: column;
+        height: max-content;
+      }
+      .project:nth-child(2n){
+        flex-direction: column;
+      }
+      .phone,.laptop{
+        transform: none !important;
+      }
+      
+      .githubChart{
+        display: none;
+      }
+    
+      .githubTitle{
+        text-align: center;
+        font-size: 10vw;
+      }
+    
+      .githubSm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        color:#555;
+        font-size: 30px;
+        text-align: center;
+      }
+    }
+  
+   
